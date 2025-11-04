@@ -13,6 +13,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/projetos" element={<Projects />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/proyectos" element={<Projects />} />
         </Routes>
       </BrowserRouter>
     </LanguageProvider>

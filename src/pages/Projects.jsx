@@ -1,50 +1,16 @@
-import { useRef, useState, useEffect } from 'react';
+import { useRef } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import Header from '../components/Header';
+import useSectionVisibility from '../hooks/useSectionVisibility';
 
 export default function Projects() {
   const { t } = useLanguage();
-  
+
   const digitalSolutionsRef = useRef(null);
   const dashboardsRef = useRef(null);
-  
-  const [digitalVisible, setDigitalVisible] = useState(false);
-  const [dashboardsVisible, setDashboardsVisible] = useState(false);
 
-  useEffect(() => {
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: "0px 0px -50px 0px",
-    };
-
-    const digitalObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setDigitalVisible(true);
-        }
-      });
-    }, observerOptions);
-
-    const dashboardsObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setDashboardsVisible(true);
-        }
-      });
-    }, observerOptions);
-
-    if (digitalSolutionsRef.current) {
-      digitalObserver.observe(digitalSolutionsRef.current);
-    }
-    if (dashboardsRef.current) {
-      dashboardsObserver.observe(dashboardsRef.current);
-    }
-
-    return () => {
-      digitalObserver.disconnect();
-      dashboardsObserver.disconnect();
-    };
-  }, []);
+  const digitalVisible = useSectionVisibility(digitalSolutionsRef);
+  const dashboardsVisible = useSectionVisibility(dashboardsRef);
 
   // Projetos de exemplo - substituir pelos seus projetos reais
   const digitalProjects = [
