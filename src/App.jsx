@@ -1,6 +1,7 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import Header from "./components/Header";
 import { useLanguage } from "./contexts/LanguageContext";
+import useSectionVisibility from "./hooks/useSectionVisibility";
 
 export default function App() {
   const { t } = useLanguage();
@@ -10,74 +11,9 @@ export default function App() {
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
 
-  // Estados para controlar as animações
-  const [aboutVisible, setAboutVisible] = useState(false);
-  const [projectsVisible, setProjectsVisible] = useState(false);
-  const [contactVisible, setContactVisible] = useState(false);
-
-  useEffect(() => {
-    const observers = [];
-
-    // Configuração do Intersection Observer
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: "0px 0px -50px 0px",
-    };
-
-    // Observer para About
-    const aboutObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setAboutVisible(true);
-        }
-      });
-    }, observerOptions);
-
-    // Observer para Projects
-    const projectsObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setProjectsVisible(true);
-        }
-      });
-    }, observerOptions);
-
-    // Observer para Contact
-    const contactObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setContactVisible(true);
-        }
-      });
-    }, observerOptions);
-
-    // Observar os elementos
-    if (aboutRef.current) {
-      aboutObserver.observe(aboutRef.current);
-      observers.push({ observer: aboutObserver, element: aboutRef.current });
-    }
-    if (projectsRef.current) {
-      projectsObserver.observe(projectsRef.current);
-      observers.push({
-        observer: projectsObserver,
-        element: projectsRef.current,
-      });
-    }
-    if (contactRef.current) {
-      contactObserver.observe(contactRef.current);
-      observers.push({
-        observer: contactObserver,
-        element: contactRef.current,
-      });
-    }
-
-    // Cleanup
-    return () => {
-      observers.forEach(({ observer, element }) => {
-        observer.unobserve(element);
-      });
-    };
-  }, []);
+  const aboutVisible = useSectionVisibility(aboutRef);
+  const projectsVisible = useSectionVisibility(projectsRef);
+  const contactVisible = useSectionVisibility(contactRef);
 
   return (
     <main className="min-h-screen bg-offwhite text-graphite dark:bg-graphite dark:text-offwhite transition-colors duration-500 relative overflow-x-hidden">
@@ -116,7 +52,7 @@ export default function App() {
                   </svg>
                 </a>
                 <a
-                  href="www.linkedin.com/in/rafael-ferreira-706964210"
+                  href="https://www.linkedin.com/in/rafael-ferreira-706964210"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-full bg-graphite/10 dark:bg-offwhite/10 hover:bg-rose/20 dark:hover:bg-rose-dark/20 border-2 border-transparent hover:border-rose-dark transition-all duration-300"

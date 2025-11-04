@@ -4,8 +4,16 @@ import LanguageToggle from './LanguageToggle';
 import { useLanguage } from '../contexts/LanguageContext';
 
 export default function Header() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const navigate = useNavigate();
+
+  const projectsPathMap = {
+    pt: '/projetos',
+    en: '/projects',
+    es: '/proyectos'
+  };
+
+  const projectsPath = projectsPathMap[language] || '/projects';
 
   const handleHomeClick = (e) => {
     e.preventDefault();
@@ -26,7 +34,7 @@ export default function Header() {
             {t("home")}
           </a>
           <Link
-            to="/projetos"
+            to={projectsPath}
             className="text-graphite dark:text-offwhite hover:text-rose dark:hover:text-rose-dark transition-colors duration-300 font-sans font-medium"
           >
             {t("projects")}
