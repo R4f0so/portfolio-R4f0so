@@ -1,13 +1,20 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
-import { LanguageProvider } from './contexts/LanguageContext.jsx'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import App from './App.jsx';
+import Projects from './pages/Projects.jsx';
+import { LanguageProvider } from './contexts/LanguageContext';
+import './index.css';
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
     <LanguageProvider>
-      <App />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/projetos" element={<Projects />} />
+        </Routes>
+      </BrowserRouter>
     </LanguageProvider>
-  </StrictMode>,
-)
+  </React.StrictMode>,
+);

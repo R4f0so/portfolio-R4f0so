@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useLanguage } from "../contexts/LanguageContext";
 
 export default function LanguageToggle() {
@@ -9,17 +9,17 @@ export default function LanguageToggle() {
   const languages = [
     { code: "pt", label: "PT" },
     { code: "en", label: "EN" },
-    { code: "es", label: "ES" }
+    { code: "es", label: "ES" },
   ];
 
-  const currentLanguage = languages.find(lang => lang.code === language) || languages[0];
+  const currentLanguage = languages.find((lang) => lang.code === language);
 
   useEffect(() => {
-    const handleClickOutside = (event) => {
+    function handleClickOutside(event) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setIsOpen(false);
       }
-    };
+    }
 
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
@@ -36,7 +36,7 @@ export default function LanguageToggle() {
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="p-2 rounded-full hover:opacity-80 text-base transition-all duration-300 absolute top-6 right-20 z-20 bg-white/10 dark:bg-black/10 backdrop-blur-sm border border-black/10 dark:border-white/10 font-medium min-w-[3rem] flex items-center justify-center gap-1.5"
+        className="p-2 rounded-full hover:opacity-80 text-base transition-all duration-300 bg-white/10 dark:bg-black/10 backdrop-blur-sm border border-black/10 dark:border-white/10 font-medium min-w-12 flex items-center justify-center gap-1.5"
         title="Selecionar idioma"
         aria-label="Selecionar idioma"
         aria-expanded={isOpen}
@@ -53,7 +53,7 @@ export default function LanguageToggle() {
       </button>
 
       {isOpen && (
-        <div className="absolute top-14 right-0 z-30 bg-white dark:bg-graphite border border-black/10 dark:border-white/10 rounded-lg shadow-lg min-w-[5rem] overflow-hidden backdrop-blur-sm">
+        <div className="absolute top-14 right-0 z-30 bg-white dark:bg-graphite border border-black/10 dark:border-white/10 rounded-lg shadow-lg min-w-20 overflow-hidden backdrop-blur-sm">
           {languages.map((lang) => (
             <button
               key={lang.code}

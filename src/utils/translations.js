@@ -1,69 +1,120 @@
 export const translations = {
   pt: {
+    // Navigation
+    home: "Início",
+    projects: "Projetos",
+    contact: "Contato",
+    about: "Sobre",
+    
+    // Hero Section
     greeting: "Olá, meu nome é",
     name: "Rafael Ferreira Martins",
-    title: "Eu construo coisas para a web.",
-    education: "Formado em Análise e Desenvolvimento de Sistemas pela FATEC Carapicuíba",
-    description: "Sou um desenvolvedor de software especializado em criar experiências digitais excepcionais. Atualmente focado em criar produtos acessíveis e centrados no ser humano.",
+    title: "Tecnólogo em Análise e Desenvolvimento de Sistemas",
+    description: "Apaixonado por criar soluções digitais inovadoras e experiências web excepcionais.",
     getInTouch: "Entre em Contato",
-    about: "Sobre",
-    aboutText1: "Sou um desenvolvedor que adora criar código limpo e eficiente e interfaces de usuário bonitas. Com paixão por aprender e compartilhar conhecimento, estou sempre explorando novas tecnologias e melhores práticas em desenvolvimento web.",
+    
+    // About Section
+    aboutText1: "Gosto de unir lógica e estética para transformar ideias em experiências digitais funcionais e agradáveis. Desenvolvo sites, aplicativos e dashboards que conectam tecnologia, design e propósito, sempre com foco em clareza e impacto visual. Tenho curiosidade genuína por dados, inteligência artificial e formas criativas de usar a tecnologia para tornar o cotidiano mais simples e intuitivo.",
     aboutText2: "Aqui estão algumas tecnologias com as quais tenho trabalhado recentemente:",
+    
+    // Projects Section
     featuredProjects: "Projetos em Destaque",
     featuredProject: "Projeto em Destaque",
     projectName: "Nome do Projeto",
-    projectDescription: "Uma breve descrição do projeto e o que ele faz. Destacar recursos principais e tecnologias utilizadas.",
-    github: "GitHub ↗",
-    liveDemo: "Demo ao Vivo ↗",
-    whatsNext: "04. O Que Vem a Seguir?",
+    projectDescription: "Uma breve descrição do projeto e das tecnologias utilizadas.",
+    github: "GitHub",
+    liveDemo: "Ver Demo",
+    myProjects: "Meus Projetos",
+    projectsDescription: "Confira alguns dos projetos que desenvolvi",
+    digitalSolutions: "Soluções Digitais",
+    dashboards: "Análises e Dashboards",
+    
+    // Contact Section
+    whatsNext: "E Agora?",
     getInTouchTitle: "Entre em Contato",
-    contactText: "Atualmente estou procurando novas oportunidades. Se você tem uma pergunta ou apenas quer dizer olá, vou fazer o meu melhor para responder!",
+    contactText: "Estou sempre aberto a novas oportunidades e colaborações. Sinta-se à vontade para entrar em contato!",
     sayHello: "Diga Olá",
-    builtWith: "Construído com React & Tailwind CSS"
+    
+    // Footer
+    builtWith: "© 2025 Rafael Ferreira Martins — feito com amor por R4f0so 💜",
   },
   en: {
-    greeting: "Hi, my name is",
-    name: "Rafael Ferreira Martins",
-    title: "I build things for the web.",
-    education: "Graduated in Systems Analysis and Development from FATEC Carapicuíba",
-    description: "I'm a software developer specializing in building exceptional digital experiences. Currently focused on creating accessible, human-centered products.",
-    getInTouch: "Get In Touch",
+    // Navigation
+    home: "Home",
+    projects: "Projects",
+    contact: "Contact",
     about: "About",
-    aboutText1: "I'm a developer who loves crafting clean, efficient code and beautiful user interfaces. With a passion for learning and sharing knowledge, I'm always exploring new technologies and best practices in web development.",
-    aboutText2: "Here are a few technologies I've been working with recently:",
+    
+    // Hero Section
+    greeting: "Hello, my name is",
+    name: "Rafael Ferreira Martins",
+    title: "Technologist in Systems Analysis and Development",
+    description: "Passionate about creating innovative digital solutions and exceptional web experiences.",
+    getInTouch: "Get In Touch",
+    
+    // About Section
+    aboutText1: "I enjoy combining logic and aesthetics to transform ideas into functional and pleasant digital experiences. I develop websites, applications, and dashboards that connect technology, design, and purpose, always focusing on clarity and visual impact. I have a genuine curiosity about data, artificial intelligence, and creative ways to use technology to make everyday life simpler and more intuitive.",
+    aboutText2: "Here are some technologies I've been working with recently:",
+    
+    // Projects Section
     featuredProjects: "Featured Projects",
     featuredProject: "Featured Project",
     projectName: "Project Name",
-    projectDescription: "A brief description of the project and what it does. Highlight key features and technologies used.",
-    github: "GitHub ↗",
-    liveDemo: "Live Demo ↗",
-    whatsNext: "04. What's Next?",
+    projectDescription: "A brief description of the project and technologies used.",
+    github: "GitHub",
+    liveDemo: "Live Demo",
+    myProjects: "My Projects",
+    projectsDescription: "Check out some of the projects I've developed",
+    digitalSolutions: "Digital Solutions",
+    dashboards: "Analytics & Dashboards",
+    
+    // Contact Section
+    whatsNext: "What's Next?",
     getInTouchTitle: "Get In Touch",
-    contactText: "I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!",
+    contactText: "I'm always open to new opportunities and collaborations. Feel free to reach out!",
     sayHello: "Say Hello",
-    builtWith: "Built with React & Tailwind CSS"
+    
+    // Footer
+    builtWith: "© 2025 Rafael Ferreira Martins — made with love by R4f0so 💜",
   },
   es: {
+    // Navigation
+    home: "Inicio",
+    projects: "Proyectos",
+    contact: "Contacto",
+    about: "Acerca de",
+    
+    // Hero Section
     greeting: "Hola, mi nombre es",
     name: "Rafael Ferreira Martins",
-    title: "Construyo cosas para la web.",
-    education: "Graduado en Análisis y Desarrollo de Sistemas por FATEC Carapicuíba",
-    description: "Soy un desarrollador de software especializado en crear experiencias digitales excepcionales. Actualmente enfocado en crear productos accesibles y centrados en el ser humano.",
-    getInTouch: "Ponerse en Contacto",
-    about: "Acerca de",
-    aboutText1: "Soy un desarrollador que adora crear código limpio y eficiente e interfaces de usuario hermosas. Con pasión por aprender y compartir conocimiento, siempre estoy explorando nuevas tecnologías y mejores prácticas en desarrollo web.",
-    aboutText2: "Aquí hay algunas tecnologías con las que he estado trabajando recientemente:",
+    title: "Tecnólogo en Análisis y Desarrollo de Sistemas",
+    description: "Apasionado por crear soluciones digitales inovadoras y experiencias web excepcionales.",
+    getInTouch: "Contactar",
+    
+    // About Section
+    aboutText1: "Me gusta unir lógica y estética para transformar ideas en experiencias digitales funcionales y agradables. Desarrollo sitios web, aplicaciones y dashboards que conectan tecnología, diseño y propósito, siempre enfocado en claridad e impacto visual. Tengo curiosidad genuína por datos, inteligencia artificial y formas creativas de usar la tecnología para hacer la vida cotidiana más simple e intuitiva.",
+    aboutText2: "Estas son algunas tecnologías con las que he estado trabajando recientemente:",
+    
+    // Projects Section
     featuredProjects: "Proyectos Destacados",
     featuredProject: "Proyecto Destacado",
     projectName: "Nombre del Proyecto",
-    projectDescription: "Una breve descripción del proyecto y lo que hace. Destacar características clave y tecnologías utilizadas.",
-    github: "GitHub ↗",
-    liveDemo: "Demo en Vivo ↗",
-    whatsNext: "04. ¿Qué Sigue?",
-    getInTouchTitle: "Ponerse en Contacto",
-    contactText: "Actualmente estoy buscando nuevas oportunidades. Ya sea que tengas una pregunta o solo quieras saludar, ¡haré lo mejor para responderte!",
-    sayHello: "Di Hola",
-    builtWith: "Construido con React & Tailwind CSS"
-  }
+    projectDescription: "Una breve descripción del proyecto y las tecnologías utilizadas.",
+    github: "GitHub",
+    liveDemo: "Ver Demo",
+    myProjects: "Mis Proyectos",
+    projectsDescription: "Echa un vistazo a algunos de los proyectos que he desarrollado",
+    digitalSolutions: "Soluciones Digitales",
+    dashboards: "Análisis y Dashboards",
+    
+    // Contact Section
+    whatsNext: "¿Y Ahora?",
+    getInTouchTitle: "Contactar",
+    contactText: "Siempre estoy abierto a nuevas oportunidades y colaboraciones. ¡No dudes en contactarme!",
+    sayHello: "Saludar",
+    
+    // Footer
+    builtWith: "© 2025 Rafael Ferreira Martins — hecho con amor por R4f0so 💜 ",
+  },
 };
 
